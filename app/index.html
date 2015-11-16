@@ -13,7 +13,7 @@
     <!-- endbuild -->
 
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-    
+
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -94,9 +94,43 @@
                     </div>
                 </nav>
                 <section class="content">
-                    <header class="content__header"></header>
-                    <ul class="content__tabs"></ul>
-                    <ul class="content__info"></ul>
+                    <header class="content__header">
+                        <h2>Cadence Name</h2>
+                        <button>Exit to Cadences</button>
+                    </header>
+                    <ul class="content__tabs">
+                        <li>Overview</li>
+                        <li>People</li>
+                        <li>Sent</li>
+                        <li>Steps</li>
+                        <li>Settings</li>
+                    </ul>
+                    <ul class="content__info">
+                        <li>
+                            <h5>4</h5>
+                            <p>Active</p>
+                        </li>
+                        <li>
+                            <h5>12</h5>
+                            <p>Bounced</p>
+                        </li>
+                        <li>
+                            <h5>4</h5>
+                            <p>Opened</p>
+                        </li>
+                        <li>
+                            <h5>6</h5>
+                            <p>Clicked</p>
+                        </li>
+                        <li>
+                            <h5>2</h5>
+                            <p>Replied</p>
+                        </li>
+                        <li>
+                            <h5>17</h5>
+                            <p>Called</p>
+                        </li>
+                    </ul>
                     <label class="content__filter">
                         <span>Filter by Step</span>
                         <select name="step-filter">
@@ -106,17 +140,113 @@
                         </select>
                     </label>
                     <section class="content__table">
-                        <header class="content__table--header"></header>
+                        <header class="content__table--header">
+                            <p>With Selected: (<span>0</span>):</p>
+                            <button>
+                                <i class="fa fa-chevron-down"></i>
+                                Add to Cadence
+                            </button>
+                            <button>
+                                <i class="fa fa-chevron-down"></i>
+                                Remove from Cadence
+                            </button>
+                            <button>
+                                <i class="fa fa-chevron-down"></i>
+                                Skip Next Action
+                            </button>
+                            <button>
+                                <i class="fa fa-chevron-down"></i>
+                                Send One-Off Email
+                            </button>
+                            <button>
+                                <i class="fa fa-chevron-down"></i>
+                                Export to CSV
+                            </button>
+                        </header>
                         <table class="content__table--body">
-                            <thead></thead>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox">
+                                    </th>
+                                    <th>
+                                        <i class="fa fa-chevron-down"></i>
+                                    </th>
+                                    <th>
+                                        Name
+                                        <i class="fa fa-chevron-down"></i>
+                                    </th>
+                                    <th>
+                                        Company
+                                        <i class="fa fa-chevron-down"></i>
+                                    </th>
+                                    <th>
+                                        Stage
+                                        <i class="fa fa-chevron-down"></i>
+                                    </th>
+                                    <th>
+                                        Step
+                                        <i class="fa fa-chevron-down"></i>
+                                    </th>
+                                    <th>
+                                        <i class="fa fa-chevron-down"></i>
+                                    </th>
+                                    <th>
+                                        <i class="fa fa-chevron-down"></i>
+                                    </th>
+                                    <th>
+                                        <i class="fa fa-chevron-down"></i>
+                                    </th>
+                                    <th>
+                                        <i class="fa fa-chevron-down"></i>
+                                    </th>
+                                    <th>
+                                        Due On
+                                    </th>
+                                    <th>
+                                        Last Contacted
+                                        <i class="fa fa-chevron-down"></i>
+                                    </th>
+                                </tr>
+                            </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>2</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>4</td>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-chevron-down"></i>
+                                    </td>
+                                    <td>
+                                        Name
+                                    </td>
+                                    <td>
+                                        Company
+                                    </td>
+                                    <td>
+                                        Stage
+                                    </td>
+                                    <td>
+                                        Step
+                                    </td>
+                                    <td>
+                                        Item
+                                    </td>
+                                    <td>
+                                        Item
+                                    </td>
+                                    <td>
+                                        Item
+                                    </td>
+                                    <td>
+                                        Item
+                                    </td>
+                                    <td>
+                                        Due On
+                                    </td>
+                                    <td>
+                                        Last Contacted
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

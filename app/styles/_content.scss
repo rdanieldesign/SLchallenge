@@ -1,0 +1,51 @@
+.content {
+	flex: 1 1 auto;
+	display: flex;
+	flex-flow: row wrap;
+	color: $grey;
+	overflow-y: scroll;
+	padding: 1rem;
+
+	&__header {
+		flex: 1 100%;
+		display: flex;
+	}
+
+	&__tabs {
+		flex: 1 100%;
+
+		li {
+			display: inline-block;
+		}
+	}
+
+	&__info {
+		flex: 1 auto;
+
+		li {
+			display: inline-block;
+			border: 1px solid $grey;
+		}
+	}
+
+	&__filter {
+		flex: 0 8rem;
+		display: inline-block;
+	}
+
+	&__table {
+		flex: 1 100%;
+
+		&--header {
+			width: 100%;
+
+			p, button {
+				display: inline-block;
+			}
+		}
+
+		&--body {
+			width: 100%;
+		}
+	}
+}
