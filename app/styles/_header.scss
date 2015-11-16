@@ -1,26 +1,25 @@
 .header {
-    flex: 0 2.6rem;
+    flex: 0 0 2.6rem;
 	display: flex;
 	flex-flow: row nowrap;
-	height: 2.6rem;
 	@include bg-gradient($blue, $purple);
 
 
 	&__logo {
-		flex: 0 14rem;
+		flex: 0 0 14rem;
 		padding: 0 4rem;
 	}
 
 	&__search {
-		flex: 1 auto;
+		flex: 1 1 auto;
 		max-width: 16rem;
 	}
 
 	&__link-list {
-		flex: 1 auto;
+		flex: 1 1 auto;
 	}
 
 	&__user-select {
-		flex: 1 auto;
+		flex: 1 1 auto;
 	}
 }
