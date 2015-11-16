@@ -1,0 +1,6 @@
+@mixin bg-gradient($first, $second) {
+	background-color: $first;
+	background: -webkit-gradient(linear, left top, right top, from($first), to($second));
+	background: -webkit-linear-gradient(left, $second, $first);
+	background: -moz-linear-gradient(left, $second, $first);
+}

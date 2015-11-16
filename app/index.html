@@ -11,6 +11,9 @@
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -26,11 +29,11 @@
 
     <div class="wrapper">
             <header class="header">
-                <img src="images/logo.svg" alt="SalesLoft">
-                <input type="text" class="search" placeholder="search">
+                <img class="header__logo" src="images/logo.svg" alt="SalesLoft">
+                <input type="text" class="header__search" placeholder="search">
                 <ul class="header__link-list">
                     <li class="header__link-list--item">
-                        <i class="fa fa-rss-square"></i>
+                        <i class="fa fa-phone-square"></i>
                         Dial Pad
                     </li>
                     <li class="header__link-list--item">
@@ -38,20 +41,88 @@
                         Live Feed
                     </li>
                 </ul>
-                <label class="user-select">
+                <label class="header__user-select">
                     <p>Tom Jones</p>
                     <span>Personal: Tom Jones</span>
-                    <select name="user-selection" id=""></select>
+                    <select name="user-selection">
+                        <option value="one">one</option>
+                        <option value="two">two</option>
+                        <option value="three">three</option>
+                    </select>
                 </label>
             </header>
-            <nav class="navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__list--item">
-                        <i class="fa fa-camera-retro"></i>
-                        Dashboard
-                    </li>
-                </ul>
-            </nav>
+            <div class="primary">
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__list--item">
+                            <i class="fa fa-dashboard"></i>
+                            Dashboard
+                        </li>
+                        <li class="navigation__list--item">
+                            <i class="fa fa-rocket"></i>
+                            Cadence
+                        </li>
+                        <li class="navigation__list--item">
+                            <i class="fa fa-bar-chart"></i>
+                            Reports
+                        </li>
+                        <li class="navigation__list--item">
+                            <i class="fa fa-envelope"></i>
+                            Emails
+                        </li>
+                        <li class="navigation__list--item">
+                            <i class="fa fa-download"></i>
+                            Import
+                        </li>
+                        <li class="navigation__list--item">
+                            <i class="fa fa-users"></i>
+                            People
+                        </li>
+                        <li class="navigation__list--item">
+                            <i class="fa fa-folder-open"></i>
+                            Templates
+                        </li>
+                    </ul>
+                    <label class="navigation__resources">
+                        <i class="fa fa-chevron-down"></i>
+                        <span>Resources</span>
+                        <select class="navigation__resources--select" name="resources"></select>
+                    </label>
+                    <div class="navigation__textlinks">
+                        <a class="navigation__textlinks--link" href="#">Live Chat</a>
+                        <a class="navigation__textlinks--link" href="#">Search Help</a>
+                    </div>
+                </nav>
+                <section class="content">
+                    <header class="content__header"></header>
+                    <ul class="content__tabs"></ul>
+                    <ul class="content__info"></ul>
+                    <label class="content__filter">
+                        <span>Filter by Step</span>
+                        <select name="step-filter">
+                            <option value="one">one</option>
+                            <option value="two">two</option>
+                            <option value="three">three</option>
+                        </select>
+                    </label>
+                    <section class="content__table">
+                        <header class="content__table--header"></header>
+                        <table class="content__table--body">
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+            </div>
         </div>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -59,16 +130,6 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>

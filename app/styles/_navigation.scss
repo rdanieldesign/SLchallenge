@@ -1,0 +1,16 @@
+.navigation {
+	flex: 0 14rem;
+	display: flex;
+	flex-flow: column nowrap;
+	background-color: $grey;
+
+	&__list {
+		flex: 1 auto;
+
+		&--item {
+			display: flex;
+		    margin: 1rem;
+		    justify-content: center;
+		}
+	}
+}
