@@ -3,7 +3,7 @@
 	display: flex;
 	flex-flow: row nowrap;
 	@include bg-gradient($blue, $purple);
-
+    align-items: center;
 
 	&__logo {
 		flex: 0 0 14rem;
@@ -11,15 +11,30 @@
 	}
 
 	&__search {
-		flex: 1 1 auto;
+		flex: 1 1 10rem;
 		max-width: 16rem;
+        height: 1.8rem;
+        margin-right: 1.6rem;
+        padding-left: .6rem;
 	}
 
 	&__link-list {
 		flex: 1 1 auto;
-	}
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
 
-	&__user-select {
-		flex: 1 1 auto;
+        &--item {
+            display: inline-block;
+            margin-right: 1.6rem;
+
+            p {
+                margin: 0;
+            }
+
+            span {
+                margin-right: .6rem;
+            }
+        }
 	}
 }

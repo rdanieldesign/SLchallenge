@@ -11,6 +11,8 @@
 		flex: 1 1 100%;
 		display: flex;
 	    justify-content: space-between;
+		background: $light-grey;
+		margin-bottom: 2rem;
 	}
 
 	&__tabs {
