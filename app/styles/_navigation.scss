@@ -6,11 +6,15 @@
 
 	&__list {
 		flex: 1 1 auto;
+		overflow-y: scroll;
 
 		&--item {
 			display: flex;
-		    margin: 1rem;
-		    justify-content: center;
+		    margin: 2rem 1.2rem 0;
+
+			i {
+				margin-right: .6rem;
+			}
 		}
 	}
 }

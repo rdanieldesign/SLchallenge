@@ -11,27 +11,27 @@
 </ul>
 <ul class="content__info">
 	<li>
-		<h5>4</h5>
+		<h3>4</h3>
 		<p>Active</p>
 	</li>
 	<li>
-		<h5>12</h5>
+		<h3>12</h3>
 		<p>Bounced</p>
 	</li>
 	<li>
-		<h5>4</h5>
+		<h3>4</h3>
 		<p>Opened</p>
 	</li>
 	<li>
-		<h5>6</h5>
+		<h3>6</h3>
 		<p>Clicked</p>
 	</li>
 	<li>
-		<h5>2</h5>
+		<h3>2</h3>
 		<p>Replied</p>
 	</li>
 	<li>
-		<h5>17</h5>
+		<h3>17</h3>
 		<p>Called</p>
 	</li>
 </ul>
@@ -68,93 +68,95 @@
 			Export to CSV
 		</button>
 	</header>
-	<table class="content__table--body">
-		<thead>
-			<tr>
-				<th>
-					<input type="checkbox" ng-model="allChecked" ng-change="checkAll(allChecked)">
-				</th>
-				<th>
-					<i class="fa fa-star-o" ng-if="!allStarred" ng-click="starAll(allStarred)"></i>
-					<i class="fa fa-star" ng-if="allStarred" ng-click="starAll(allStarred)"></i>
-				</th>
-				<th ng-click="reverse = !reverse; sortBy('name', reverse)">
-					Name
-					<i class="fa fa-sort"></i>
-				</th>
-				<th ng-click="reverse = !reverse; sortBy('company', reverse)">
-					Company
-					<i class="fa fa-sort"></i>
-				</th>
-				<th ng-click="reverse = !reverse; sortBy('stage', reverse)">
-					Stage
-					<i class="fa fa-sort"></i>
-				</th>
-				<th ng-click="reverse = !reverse; sortBy('step', reverse)">
-					Step
-					<i class="fa fa-sort"></i>
-				</th>
-				<th>
-					<i class="fa fa-eye"></i>
-				</th>
-				<th>
-					<i class="fa fa-hand-pointer-o"></i>
-				</th>
-				<th>
-					<i class="fa fa-mail-reply"></i>
-				</th>
-				<th>
-					<i class="fa fa-phone"></i>
-				</th>
-				<th>
-					Due On
-				</th>
-				<th ng-click="reverse = !reverse; sortBy('lastContacted', reverse)">
-					Last Contacted
-					<i class="fa fa-sort"></i>
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="item in list">
-				<td>
-					<input type="checkbox" ng-model="item.isChecked" ng-change="checkItem(item)">
-				</td>
-				<td>
-					<i class="fa fa-star-o" ng-if="!item.starred" ng-click="starItem(item)"></i>
-					<i class="fa fa-star" ng-if="item.starred" ng-click="starItem(item)"></i>
-				</td>
-				<td>
-					{{ item.name }}
-				</td>
-				<td>
-					{{ item.company }}
-				</td>
-				<td>
-					{{ item.stage }}
-				</td>
-				<td>
-					Step {{ item.step }}
-				</td>
-				<td>
-					{{ item.views }}
-				</td>
-				<td>
-					{{ item.clicks }}
-				</td>
-				<td>
-					{{ item.replies }}
-				</td>
-				<td>
-					{{ item.calls }}
-				</td>
-				<td>
-					{{ item.due }}
-				</td>
-				<td>
-					{{ item.lastContacted }}
-				</td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="content__table--scroller">
+		<table class="content__table--body">
+			<thead>
+				<tr>
+					<th>
+						<input type="checkbox" ng-model="allChecked" ng-change="checkAll(allChecked)">
+					</th>
+					<th>
+						<i class="fa fa-star-o" ng-if="!allStarred" ng-click="starAll(allStarred)"></i>
+						<i class="fa fa-star" ng-if="allStarred" ng-click="starAll(allStarred)"></i>
+					</th>
+					<th ng-click="reverse = !reverse; sortBy('name', reverse)">
+						Name
+						<i class="fa fa-sort"></i>
+					</th>
+					<th ng-click="reverse = !reverse; sortBy('company', reverse)">
+						Company
+						<i class="fa fa-sort"></i>
+					</th>
+					<th ng-click="reverse = !reverse; sortBy('stage', reverse)">
+						Stage
+						<i class="fa fa-sort"></i>
+					</th>
+					<th ng-click="reverse = !reverse; sortBy('step', reverse)">
+						Step
+						<i class="fa fa-sort"></i>
+					</th>
+					<th>
+						<i class="fa fa-eye"></i>
+					</th>
+					<th>
+						<i class="fa fa-hand-pointer-o"></i>
+					</th>
+					<th>
+						<i class="fa fa-mail-reply"></i>
+					</th>
+					<th>
+						<i class="fa fa-phone"></i>
+					</th>
+					<th>
+						Due On
+					</th>
+					<th ng-click="reverse = !reverse; sortBy('lastContacted', reverse)">
+						Last Contacted
+						<i class="fa fa-sort"></i>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in list">
+					<td>
+						<input type="checkbox" ng-model="item.isChecked" ng-change="checkItem(item)">
+					</td>
+					<td>
+						<i class="fa fa-star-o" ng-if="!item.starred" ng-click="starItem(item)"></i>
+						<i class="fa fa-star" ng-if="item.starred" ng-click="starItem(item)"></i>
+					</td>
+					<td>
+						{{ item.name }}
+					</td>
+					<td>
+						{{ item.company }}
+					</td>
+					<td>
+						{{ item.stage }}
+					</td>
+					<td>
+						Step {{ item.step }}
+					</td>
+					<td>
+						{{ item.views }}
+					</td>
+					<td>
+						{{ item.clicks }}
+					</td>
+					<td>
+						{{ item.replies }}
+					</td>
+					<td>
+						{{ item.calls }}
+					</td>
+					<td>
+						{{ item.due }}
+					</td>
+					<td>
+						{{ item.lastContacted }}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </section>
