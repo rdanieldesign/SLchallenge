@@ -11,6 +11,6 @@
 
 			return {
 				getEntries: getEntries
-			}
+			};
 		}]);
 })();

@@ -3,19 +3,24 @@
 
 	angular
 		.module('app')
-		.controller('CadenceController', ['$scope', '$rootScope', 'CadenceFactory', function($scope, $rootScope, CadenceFactory){
+		.controller('CadenceController', ['$scope', '$filter', 'CadenceFactory', function($scope, $filter, CadenceFactory){
+
+			var originalData;
+			var orderBy = $filter('orderBy');
+			var filter = $filter('filter');
+			$scope.checkedCount = 0;
+			$scope.allStarred = false;
+			$scope.reverse = true;
 
 			CadenceFactory.getEntries().success(function(data){
-				$scope.list =  data
+				$scope.list = originalData = data;
 			});
-
-			$scope.checkedCount = 0;
 
 			$scope.checkItem = function(item){
 				if(item.isChecked){
-					$scope.checkedCount++
+					$scope.checkedCount++;
 				} else {
-					$scope.checkedCount--
+					$scope.checkedCount--;
 				}
 			};
 
@@ -30,6 +35,28 @@
 				}
 			};
 
+			$scope.starItem = function(item){
+				item.starred = !item.starred;
+			};
+
+			$scope.starAll = function(allStarred){
+				$scope.allStarred = !allStarred;
+				$scope.list.forEach(function(item){
+					item.starred = !allStarred;
+				});
+			};
+
+			$scope.sortBy = function(predicate, reverse){
+				$scope.list = orderBy($scope.list, predicate, reverse);
+			};
+
+			$scope.filterSteps = function(step){
+				if(!step){
+					$scope.list = originalData;
+				} else {
+					$scope.list = filter(originalData, {step: step});
+				}
+			};
 
 		}]);
 })();

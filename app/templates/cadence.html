@@ -37,15 +37,16 @@
 </ul>
 <label class="content__filter">
 	<span>Filter by Step</span>
-	<select name="step-filter">
-		<option value="one">one</option>
-		<option value="two">two</option>
-		<option value="three">three</option>
+	<select name="step-filter" ng-model="activeStep" ng-change="filterSteps(activeStep)">
+		<option value="" selected>All</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
 	</select>
 </label>
 <section class="content__table">
 	<header class="content__table--header">
-		<p>With Selected: (<span>{{ checkedCount }}</span>):</p>
+		<p>With Selected (<span>{{ checkedCount }}</span>):</p>
 		<button>
 			<i class="fa fa-plus"></i>
 			Add to Cadence
@@ -74,21 +75,22 @@
 					<input type="checkbox" ng-model="allChecked" ng-change="checkAll(allChecked)">
 				</th>
 				<th>
-					<i class="fa fa-star-o"></i>
+					<i class="fa fa-star-o" ng-if="!allStarred" ng-click="starAll(allStarred)"></i>
+					<i class="fa fa-star" ng-if="allStarred" ng-click="starAll(allStarred)"></i>
 				</th>
-				<th>
+				<th ng-click="reverse = !reverse; sortBy('name', reverse)">
 					Name
 					<i class="fa fa-sort"></i>
 				</th>
-				<th>
+				<th ng-click="reverse = !reverse; sortBy('company', reverse)">
 					Company
 					<i class="fa fa-sort"></i>
 				</th>
-				<th>
+				<th ng-click="reverse = !reverse; sortBy('stage', reverse)">
 					Stage
 					<i class="fa fa-sort"></i>
 				</th>
-				<th>
+				<th ng-click="reverse = !reverse; sortBy('step', reverse)">
 					Step
 					<i class="fa fa-sort"></i>
 				</th>
@@ -107,7 +109,7 @@
 				<th>
 					Due On
 				</th>
-				<th>
+				<th ng-click="reverse = !reverse; sortBy('lastContacted', reverse)">
 					Last Contacted
 					<i class="fa fa-sort"></i>
 				</th>
@@ -119,7 +121,8 @@
 					<input type="checkbox" ng-model="item.isChecked" ng-change="checkItem(item)">
 				</td>
 				<td>
-					<i class="fa fa-star-o"></i>
+					<i class="fa fa-star-o" ng-if="!item.starred" ng-click="starItem(item)"></i>
+					<i class="fa fa-star" ng-if="item.starred" ng-click="starItem(item)"></i>
 				</td>
 				<td>
 					{{ item.name }}
@@ -131,7 +134,7 @@
 					{{ item.stage }}
 				</td>
 				<td>
-					{{ item.step }}
+					Step {{ item.step }}
 				</td>
 				<td>
 					{{ item.views }}
