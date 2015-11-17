@@ -1,0 +1,157 @@
+<header class="content__header">
+	<h2>Cadence Name</h2>
+	<button>Exit to Cadences</button>
+</header>
+<ul class="content__tabs">
+	<li>Overview</li>
+	<li>People</li>
+	<li>Sent</li>
+	<li>Steps</li>
+	<li>Settings</li>
+</ul>
+<ul class="content__info">
+	<li>
+		<h5>4</h5>
+		<p>Active</p>
+	</li>
+	<li>
+		<h5>12</h5>
+		<p>Bounced</p>
+	</li>
+	<li>
+		<h5>4</h5>
+		<p>Opened</p>
+	</li>
+	<li>
+		<h5>6</h5>
+		<p>Clicked</p>
+	</li>
+	<li>
+		<h5>2</h5>
+		<p>Replied</p>
+	</li>
+	<li>
+		<h5>17</h5>
+		<p>Called</p>
+	</li>
+</ul>
+<label class="content__filter">
+	<span>Filter by Step</span>
+	<select name="step-filter">
+		<option value="one">one</option>
+		<option value="two">two</option>
+		<option value="three">three</option>
+	</select>
+</label>
+<section class="content__table">
+	<header class="content__table--header">
+		<p>With Selected: (<span>{{ checkedCount }}</span>):</p>
+		<button>
+			<i class="fa fa-plus"></i>
+			Add to Cadence
+		</button>
+		<button>
+			<i class="fa fa-recycle"></i>
+			Remove from Cadence
+		</button>
+		<button>
+			<i class="fa fa-fast-forward"></i>
+			Skip Next Action
+		</button>
+		<button>
+			<i class="fa fa-pencil-square-o"></i>
+			Send One-Off Email
+		</button>
+		<button>
+			<i class="fa fa-share-square-o"></i>
+			Export to CSV
+		</button>
+	</header>
+	<table class="content__table--body">
+		<thead>
+			<tr>
+				<th>
+					<input type="checkbox" ng-model="allChecked" ng-change="checkAll(allChecked)">
+				</th>
+				<th>
+					<i class="fa fa-star-o"></i>
+				</th>
+				<th>
+					Name
+					<i class="fa fa-sort"></i>
+				</th>
+				<th>
+					Company
+					<i class="fa fa-sort"></i>
+				</th>
+				<th>
+					Stage
+					<i class="fa fa-sort"></i>
+				</th>
+				<th>
+					Step
+					<i class="fa fa-sort"></i>
+				</th>
+				<th>
+					<i class="fa fa-eye"></i>
+				</th>
+				<th>
+					<i class="fa fa-hand-pointer-o"></i>
+				</th>
+				<th>
+					<i class="fa fa-mail-reply"></i>
+				</th>
+				<th>
+					<i class="fa fa-phone"></i>
+				</th>
+				<th>
+					Due On
+				</th>
+				<th>
+					Last Contacted
+					<i class="fa fa-sort"></i>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in list">
+				<td>
+					<input type="checkbox" ng-model="item.isChecked" ng-change="checkItem(item)">
+				</td>
+				<td>
+					<i class="fa fa-star-o"></i>
+				</td>
+				<td>
+					{{ item.name }}
+				</td>
+				<td>
+					{{ item.company }}
+				</td>
+				<td>
+					{{ item.stage }}
+				</td>
+				<td>
+					{{ item.step }}
+				</td>
+				<td>
+					{{ item.views }}
+				</td>
+				<td>
+					{{ item.clicks }}
+				</td>
+				<td>
+					{{ item.replies }}
+				</td>
+				<td>
+					{{ item.calls }}
+				</td>
+				<td>
+					{{ item.due }}
+				</td>
+				<td>
+					{{ item.lastContacted }}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</section>

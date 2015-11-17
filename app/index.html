@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" ng-app="app">
   <head>
     <meta charset="utf-8">
     <title>SLchallenge</title>
@@ -93,214 +93,22 @@
                         <a class="navigation__textlinks--link" href="#">Search Help</a>
                     </div>
                 </nav>
-                <section class="content">
-                    <header class="content__header">
-                        <h2>Cadence Name</h2>
-                        <button>Exit to Cadences</button>
-                    </header>
-                    <ul class="content__tabs">
-                        <li>Overview</li>
-                        <li>People</li>
-                        <li>Sent</li>
-                        <li>Steps</li>
-                        <li>Settings</li>
-                    </ul>
-                    <ul class="content__info">
-                        <li>
-                            <h5>4</h5>
-                            <p>Active</p>
-                        </li>
-                        <li>
-                            <h5>12</h5>
-                            <p>Bounced</p>
-                        </li>
-                        <li>
-                            <h5>4</h5>
-                            <p>Opened</p>
-                        </li>
-                        <li>
-                            <h5>6</h5>
-                            <p>Clicked</p>
-                        </li>
-                        <li>
-                            <h5>2</h5>
-                            <p>Replied</p>
-                        </li>
-                        <li>
-                            <h5>17</h5>
-                            <p>Called</p>
-                        </li>
-                    </ul>
-                    <label class="content__filter">
-                        <span>Filter by Step</span>
-                        <select name="step-filter">
-                            <option value="one">one</option>
-                            <option value="two">two</option>
-                            <option value="three">three</option>
-                        </select>
-                    </label>
-                    <section class="content__table">
-                        <header class="content__table--header">
-                            <p>With Selected: (<span>0</span>):</p>
-                            <button>
-                                <i class="fa fa-chevron-down"></i>
-                                Add to Cadence
-                            </button>
-                            <button>
-                                <i class="fa fa-chevron-down"></i>
-                                Remove from Cadence
-                            </button>
-                            <button>
-                                <i class="fa fa-chevron-down"></i>
-                                Skip Next Action
-                            </button>
-                            <button>
-                                <i class="fa fa-chevron-down"></i>
-                                Send One-Off Email
-                            </button>
-                            <button>
-                                <i class="fa fa-chevron-down"></i>
-                                Export to CSV
-                            </button>
-                        </header>
-                        <table class="content__table--body">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <input type="checkbox">
-                                    </th>
-                                    <th>
-                                        <i class="fa fa-chevron-down"></i>
-                                    </th>
-                                    <th>
-                                        Name
-                                        <i class="fa fa-chevron-down"></i>
-                                    </th>
-                                    <th>
-                                        Company
-                                        <i class="fa fa-chevron-down"></i>
-                                    </th>
-                                    <th>
-                                        Stage
-                                        <i class="fa fa-chevron-down"></i>
-                                    </th>
-                                    <th>
-                                        Step
-                                        <i class="fa fa-chevron-down"></i>
-                                    </th>
-                                    <th>
-                                        <i class="fa fa-chevron-down"></i>
-                                    </th>
-                                    <th>
-                                        <i class="fa fa-chevron-down"></i>
-                                    </th>
-                                    <th>
-                                        <i class="fa fa-chevron-down"></i>
-                                    </th>
-                                    <th>
-                                        <i class="fa fa-chevron-down"></i>
-                                    </th>
-                                    <th>
-                                        Due On
-                                    </th>
-                                    <th>
-                                        Last Contacted
-                                        <i class="fa fa-chevron-down"></i>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox">
-                                    </td>
-                                    <td>
-                                        <i class="fa fa-chevron-down"></i>
-                                    </td>
-                                    <td>
-                                        Name
-                                    </td>
-                                    <td>
-                                        Company
-                                    </td>
-                                    <td>
-                                        Stage
-                                    </td>
-                                    <td>
-                                        Step
-                                    </td>
-                                    <td>
-                                        Item
-                                    </td>
-                                    <td>
-                                        Item
-                                    </td>
-                                    <td>
-                                        Item
-                                    </td>
-                                    <td>
-                                        Item
-                                    </td>
-                                    <td>
-                                        Due On
-                                    </td>
-                                    <td>
-                                        Last Contacted
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox">
-                                    </td>
-                                    <td>
-                                        <i class="fa fa-chevron-down"></i>
-                                    </td>
-                                    <td>
-                                        Name
-                                    </td>
-                                    <td>
-                                        Company
-                                    </td>
-                                    <td>
-                                        Stage
-                                    </td>
-                                    <td>
-                                        Step
-                                    </td>
-                                    <td>
-                                        Item
-                                    </td>
-                                    <td>
-                                        Item
-                                    </td>
-                                    <td>
-                                        Item
-                                    </td>
-                                    <td>
-                                        Item
-                                    </td>
-                                    <td>
-                                        Due On
-                                    </td>
-                                    <td>
-                                        Last Contacted
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </section>
-                </section>
+                <section class="content" ui-view> </section>
             </div>
         </div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/cadence-controller.js"></script>
+        <script src="scripts/cadence-factory.js"></script>
         <!-- endbuild -->
 </body>
 </html>
