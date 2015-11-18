@@ -1,10 +1,14 @@
 .header {
-    flex: 0 0 2.6rem;
+    @include bg-gradient($blue, $purple);
 	display: flex;
-	flex-flow: row nowrap;
-	@include bg-gradient($blue, $purple);
-    align-items: center;
+	flex-flow: column nowrap;
     position: relative;
+
+    @media(min-width: 500px){
+        flex: 0 0 2.6rem;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
 
     &__hamburger {
         position: absolute;
@@ -14,27 +18,69 @@
     }
 
 	&__logo {
-		flex: 0 0 14rem;
-		padding: 0 4rem;
+        width: 6rem;
+        margin: .6rem auto 1rem;
+
+        @media(min-width: 500px){
+            flex: 0 0 14rem;
+    		padding: 0 4rem;
+            margin: auto;
+        }
+
+        @media(min-width: 750px){
+
+        }
 	}
 
 	&__search {
-		flex: 1 1 10rem;
-		max-width: 16rem;
         height: 1.8rem;
-        margin-right: 1.6rem;
+        margin: 0 auto 1rem;
         padding-left: .6rem;
+        width: 90%;
+
+        @media(min-width: 500px){
+            width: auto;
+            max-width: 16rem;
+            flex: 1 1 auto;
+            margin: 0;
+        }
+
+        @media(min-width: 750px){
+        }
 	}
 
 	&__link-list {
 		flex: 1 1 auto;
         display: flex;
-        justify-content: flex-end;
         align-items: center;
+        width: 90%;
+        margin: 0 auto 1rem;
+
+        @media(min-width: 500px){
+            width: auto;
+            justify-content: flex-end;
+            margin: 0;
+        }
+
+        @media(min-width: 750px){
+
+        }
 
         &--item {
             display: inline-block;
-            margin-right: 1.6rem;
+            flex: 1 1 auto;
+            text-align: center;
+
+            @media(min-width: 500px){
+                flex: 0 0 auto;
+                justify-content: flex-end;
+                margin-right: 1.6rem;
+                text-align: left;
+            }
+
+            @media(min-width: 750px){
+
+            }
 
             p {
                 margin: 0;
