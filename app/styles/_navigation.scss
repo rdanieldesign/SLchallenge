@@ -1,9 +1,13 @@
 .navigation {
-	flex: 0 0 14rem;
+	flex: 0 0 100%;
 	display: flex;
 	flex-flow: column nowrap;
 	background-color: $grey;
 	position: relative;
+
+	@media(min-width: 750px){
+		flex: 0 0 14rem;
+	}
 
 	&__list {
 		flex: 1 1 auto;
@@ -24,6 +28,10 @@
 		left: -50vh;
 		height: 100vh;
 		width: 14rem;
+
+		@media(min-width: 750px){
+			position: static;
+		}
 	}
 
 	&.active {

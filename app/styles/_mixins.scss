@@ -4,3 +4,11 @@
 	background: -webkit-linear-gradient(left, $second, $first);
 	background: -moz-linear-gradient(left, $second, $first);
 }
+
+@mixin slBtn($bg-color: $white, $color: $grey, $border: 1px solid $grey){
+	padding: .5rem .85rem;
+	background-color: $bg-color;
+	border: $border;
+	color: $color;
+	border-radius: $border-radius;
+}
