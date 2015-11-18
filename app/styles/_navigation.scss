@@ -18,6 +18,10 @@
 			display: flex;
 		    margin: 2rem 1.2rem 0;
 
+			&:last-child {
+				margin-bottom: 2rem;
+			}
+
 			i {
 				margin-right: .6rem;
 			}
