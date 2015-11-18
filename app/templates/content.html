@@ -80,19 +80,19 @@
 							<i class="fa fa-star-o" ng-if="!allStarred" ng-click="starAll(allStarred)"></i>
 							<i class="fa fa-star" ng-if="allStarred" ng-click="starAll(allStarred)"></i>
 						</th>
-						<th ng-click="reverse = !reverse; sortBy('name', reverse)">
+						<th class="clickable" ng-click="reverse = !reverse; sortBy('name', reverse)">
 							Name
 							<i class="fa fa-sort"></i>
 						</th>
-						<th ng-click="reverse = !reverse; sortBy('company', reverse)">
+						<th class="clickable" ng-click="reverse = !reverse; sortBy('company', reverse)">
 							Company
 							<i class="fa fa-sort"></i>
 						</th>
-						<th ng-click="reverse = !reverse; sortBy('stage', reverse)">
+						<th class="clickable" ng-click="reverse = !reverse; sortBy('stage', reverse)">
 							Stage
 							<i class="fa fa-sort"></i>
 						</th>
-						<th ng-click="reverse = !reverse; sortBy('step', reverse)">
+						<th class="clickable" ng-click="reverse = !reverse; sortBy('step', reverse)">
 							Step
 							<i class="fa fa-sort"></i>
 						</th>
@@ -111,7 +111,7 @@
 						<th>
 							Due On
 						</th>
-						<th ng-click="reverse = !reverse; sortBy('lastContacted', reverse)">
+						<th class="clickable" ng-click="reverse = !reverse; sortBy('lastContacted', reverse)">
 							Last Contacted
 							<i class="fa fa-sort"></i>
 						</th>

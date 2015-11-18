@@ -2,7 +2,7 @@
 	flex: 0 0 100%;
 	display: flex;
 	flex-flow: column nowrap;
-	background-color: $grey;
+	background-color: $dark-grey;
 	position: relative;
 
 	@media(min-width: 500px){
@@ -16,10 +16,19 @@
 
 		&--item {
 			display: flex;
-		    margin: 2rem 1.2rem 0;
+			width: 100%;
+		    padding: 1rem 1.2rem;
+			color: $light-grey;
+			cursor: pointer;
 
-			&:last-child {
-				margin-bottom: 2rem;
+			&.active {
+				background-color: $black;
+				color: $white;
+			}
+
+			&:hover {
+				background-color: $black;
+				color: $white;
 			}
 
 			i {
@@ -35,6 +44,7 @@
 		text-align: center;
 	    padding: .6rem 0 1.4rem;
 		border-bottom: .2rem solid $purple;
+		cursor: pointer;
 
 		i {
 			margin-right: .4rem;

@@ -1,6 +1,7 @@
 .content {
 	flex: 1 1 auto;
 	color: $grey;
+	background-color: $offwhite;
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 
@@ -25,7 +26,6 @@
 		align-content: flex-start;
 		padding: 2rem 1rem;
 	    width: 100%;
-		background-color: $offwhite;
 	}
 
 	&__tabs {
@@ -149,6 +149,8 @@
 
 			thead {
 				background-color: $light-grey;
+
+
 			}
 
 			tr {
@@ -169,6 +171,13 @@
 
 				@media(min-width: 900px){
 					white-space: normal;
+				}
+
+				&.clickable,
+				.fa-star-o,
+				.fa-star,
+				[type="checkbox"] {
+					cursor: pointer;
 				}
 
 				&:first-child {
