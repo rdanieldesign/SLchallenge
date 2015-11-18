@@ -10,12 +10,24 @@
 	padding: .5rem .85rem;
 	background-color: $bg-color;
 	border: $border;
+	border-bottom-width: 3px;
 	color: $color;
 	border-radius: $border-radius;
+	border-bottom-right-radius: $border-radius-bottom;
+	border-bottom-left-radius: $border-radius-bottom;
+
+	&:hover {
+		/* border-bottom-width: 1px;
+		border-top-width: 1px;
+		border-top-right-radius: $border-radius-bottom;
+		border-top-left-radius: $border-radius-bottom;
+		border-bottom-right-radius: $border-radius;
+		border-bottom-left-radius: $border-radius; */
+	}
 }
 
 @mixin shadow(){
 	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow:    0 3px 6px rgba(0, 0, 0, 0.1);
-	box-shadow:         0 3px 6px rgba(0, 0, 0, 0.1); 
+	box-shadow:         0 3px 6px rgba(0, 0, 0, 0.1);
 }

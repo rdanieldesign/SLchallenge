@@ -5,7 +5,7 @@
 	background-color: $grey;
 	position: relative;
 
-	@media(min-width: 750px){
+	@media(min-width: 500px){
 		flex: 0 0 14rem;
 	}
 
@@ -24,17 +24,39 @@
 		}
 	}
 
+	&__resources {
+		flex: 0 0 2rem;
+		background-color: $white;
+		color: $grey;
+		text-align: center;
+	    padding: .6rem 0 1.4rem;
+		border-bottom: .2rem solid $purple;
+
+		i {
+			margin-right: .4rem;
+		}
+	}
+
+	&__textlinks {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+		background-color: $blue;
+		color: $white;
+		padding: .6rem 0 .8rem;
+
+		a {
+			color: $white;
+		}
+	}
+
 	&.hidden {
 		position: absolute;
 		left: -50vh;
-		height: 100vh;
 		width: 14rem;
 
 		@media(min-width: 750px){
 			position: static;
 		}
-	}
-
-	&.active {
 	}
 }

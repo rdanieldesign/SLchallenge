@@ -13,7 +13,6 @@
 		flex: 1 1 100%;
 		display: flex;
 	    justify-content: space-between;
-		margin-bottom: 1rem;
 	    align-items: center;
 		padding: 1rem;
 		color: $white;
@@ -24,8 +23,9 @@
 	}
 
 	&__container {
-		padding: 1rem;
+		padding: 2rem 1rem;
 	    width: 100%;
+		background-color: $offwhite;
 	}
 
 	&__tabs {
@@ -36,6 +36,13 @@
 			@include slBtn;
 			display: inline-block;
 		    margin-right: 0.4rem;
+			margin-bottom: 0.6rem;
+
+			&.active {
+				background-color: $purple;
+				color: $white;
+				border-color: $purple
+			}
 		}
 	}
 
@@ -51,6 +58,8 @@
 			padding: 1rem;
 			border-radius: $border-radius;
 		    margin-right: 0.4rem;
+			margin-bottom: 0.6rem;
+			background-color: $white;
 
 			h3, p {
 				margin: 0;
@@ -58,6 +67,7 @@
 
 			h3 {
 				margin-bottom: 1rem;
+			    font-size: 1.2rem;
 			}
 		}
 	}
@@ -72,6 +82,7 @@
 	&__table {
 		flex: 1 1 100%;
 		border: 1px solid $grey;
+		background-color: $white;
 
 		&--header {
 			width: 100%;
@@ -104,12 +115,16 @@
 				min-width: auto;
 			}
 
-			thead, tbody {
-
+			thead {
+				background-color: $light-grey;
 			}
 
 			tr {
 				border-top: 1px solid $grey;
+
+				&:nth-child(2n){
+					background-color: $offwhite;
+				}
 			}
 
 			td, th {
