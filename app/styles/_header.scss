@@ -1,5 +1,6 @@
 .header {
     @include bg-gradient($blue, $purple);
+    @include shadow;
 	display: flex;
 	flex-flow: column nowrap;
     position: relative;

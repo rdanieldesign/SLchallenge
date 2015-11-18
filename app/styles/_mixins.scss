@@ -1,5 +1,6 @@
 @mixin bg-gradient($first, $second) {
 	background-color: $first;
+	background-image: linear-gradient(to right, $first, $second);
 	background: -webkit-gradient(linear, left top, right top, from($first), to($second));
 	background: -webkit-linear-gradient(left, $second, $first);
 	background: -moz-linear-gradient(left, $second, $first);
@@ -11,4 +12,10 @@
 	border: $border;
 	color: $color;
 	border-radius: $border-radius;
+}
+
+@mixin shadow(){
+	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:    0 3px 6px rgba(0, 0, 0, 0.1);
+	box-shadow:         0 3px 6px rgba(0, 0, 0, 0.1); 
 }

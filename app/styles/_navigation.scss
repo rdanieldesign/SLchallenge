@@ -12,6 +12,7 @@
 	&__list {
 		flex: 1 1 auto;
 		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
 
 		&--item {
 			display: flex;
