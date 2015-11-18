@@ -8,11 +8,22 @@
 
 			$urlRouterProvider.otherwise('/');
 
-			$stateProvider.state('state1', {
+			$stateProvider.state('home',{
 				url: '/',
-				templateUrl: 'templates/cadence.html',
-				controller: 'CadenceController'
+				views: {
+					'content': {
+						templateUrl: 'templates/content.html',
+						controller: 'ContentController'
+					},
+					'navigation': {
+						templateUrl: 'templates/navigation.html',
+						controller: 'NavigationController'
+					},
+					'header': {
+						templateUrl: 'templates/header.html',
+						controller: 'HeaderController'
+					}
+				}
 			});
 		}]);
-
 }());

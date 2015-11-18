@@ -4,6 +4,14 @@
 	flex-flow: row nowrap;
 	@include bg-gradient($blue, $purple);
     align-items: center;
+    position: relative;
+
+    &__hamburger {
+        position: absolute;
+        left: 1rem;
+        top: 0.7rem;
+        font-size: 1.2rem;
+    }
 
 	&__logo {
 		flex: 0 0 14rem;

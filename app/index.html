@@ -27,69 +27,11 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="wrapper">
-            <header class="header">
-                <img class="header__logo" src="images/logo.svg" alt="SalesLoft">
-                <input type="text" class="header__search" placeholder="Search">
-                <ul class="header__link-list">
-                    <li class="header__link-list--item">
-                        <i class="fa fa-phone-square"></i>
-                        Dial Pad
-                    </li>
-                    <li class="header__link-list--item">
-                        <i class="fa fa-rss-square"></i>
-                        Live Feed
-                    </li>
-                    <li class="header__link-list--item">
-                        <p>Tom Jones</p>
-                        <span>Personal: Tom Jones</span>
-                        <i class="fa fa-chevron-down"></i>
-                    </li>
-                </ul>
-            </header>
+    <div class="wrapper" ui-view>
+            <header class="header" ui-view="header"></header>
             <div class="primary">
-                <nav class="navigation">
-                    <ul class="navigation__list">
-                        <li class="navigation__list--item">
-                            <i class="fa fa-dashboard"></i>
-                            Dashboard
-                        </li>
-                        <li class="navigation__list--item">
-                            <i class="fa fa-rocket"></i>
-                            Cadence
-                        </li>
-                        <li class="navigation__list--item">
-                            <i class="fa fa-bar-chart"></i>
-                            Reports
-                        </li>
-                        <li class="navigation__list--item">
-                            <i class="fa fa-envelope"></i>
-                            Emails
-                        </li>
-                        <li class="navigation__list--item">
-                            <i class="fa fa-download"></i>
-                            Import
-                        </li>
-                        <li class="navigation__list--item">
-                            <i class="fa fa-users"></i>
-                            People
-                        </li>
-                        <li class="navigation__list--item">
-                            <i class="fa fa-folder-open"></i>
-                            Templates
-                        </li>
-                    </ul>
-                    <label class="navigation__resources">
-                        <i class="fa fa-chevron-down"></i>
-                        <span>Resources</span>
-                        <select class="navigation__resources--select" name="resources"></select>
-                    </label>
-                    <div class="navigation__textlinks">
-                        <a class="navigation__textlinks--link" href="#">Live Chat</a>
-                        <a class="navigation__textlinks--link" href="#">Search Help</a>
-                    </div>
-                </nav>
-                <section class="content" ui-view> </section>
+                <nav class="navigation" ui-view="navigation" ng-class="isHidden ? 'hidden' : ''"></nav>
+                <section class="content" ui-view="content"></section>
             </div>
         </div>
 
@@ -103,8 +45,10 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
-        <script src="scripts/cadence-controller.js"></script>
-        <script src="scripts/cadence-factory.js"></script>
+        <script src="scripts/content-controller.js"></script>
+        <script src="scripts/navigation-controller.js"></script>
+        <script src="scripts/header-controller.js"></script>
+        <script src="scripts/content-factory.js"></script>
         <!-- endbuild -->
 </body>
 </html>

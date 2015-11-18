@@ -3,7 +3,7 @@
 
 	angular
 		.module('app')
-		.controller('CadenceController', ['$scope', '$filter', 'CadenceFactory', function($scope, $filter, CadenceFactory){
+		.controller('ContentController', ['$scope', '$filter', 'ContentFactory', function($scope, $filter, ContentFactory){
 
 			var originalData;
 			var orderBy = $filter('orderBy');
@@ -12,7 +12,7 @@
 			$scope.allStarred = false;
 			$scope.reverse = true;
 
-			CadenceFactory.getEntries().success(function(data){
+			ContentFactory.getEntries().success(function(data){
 				$scope.list = originalData = data;
 			});
 

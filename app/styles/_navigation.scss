@@ -3,6 +3,7 @@
 	display: flex;
 	flex-flow: column nowrap;
 	background-color: $grey;
+	position: relative;
 
 	&__list {
 		flex: 1 1 auto;
@@ -16,5 +17,15 @@
 				margin-right: .6rem;
 			}
 		}
+	}
+
+	&.hidden {
+		position: absolute;
+		left: -50vh;
+		height: 100vh;
+		width: 14rem;
+	}
+
+	&.active {
 	}
 }

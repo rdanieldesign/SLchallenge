@@ -3,7 +3,7 @@
 
 	angular
 		.module('app')
-		.factory('CadenceFactory', ['$http', function($http){
+		.factory('ContentFactory', ['$http', function($http){
 
 			var getEntries = function(){
 				return $http.get('entries.json');
