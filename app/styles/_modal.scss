@@ -1,0 +1,53 @@
+.modal {
+
+	&__container {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background-color: $black-trans;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+	}
+
+	&__box {
+		width: 80%;
+		background-color: $white;
+		margin: 0 auto;
+	}
+
+	&__header,
+	&__content,
+	&__footer {
+		width: 100%;
+		padding: 0 1rem;
+	}
+
+	&__header {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+
+		h2 {
+			flex: 1 1 auto;
+		}
+
+		i {
+			flex: 0 0 auto;
+		}
+	}
+
+	&__content {
+		margin-bottom: 1rem;
+	}
+
+	&__footer {
+		padding-bottom: 1rem;
+
+		button {
+			@include slBtn;
+		}
+	}
+}

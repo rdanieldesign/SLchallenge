@@ -1,0 +1,21 @@
+<div class="modal__container">
+	<section class="modal__box add-modal">
+		<header class="modal__header">
+			<h2>Add Contact</h2>
+			<i class="fa fa-close" ui-sref="home"></i>
+		</header>
+		<section class="modal__content">
+			<p>Enter the information for your new contact.</p>
+			<label for="newName">Name</label>
+			<input id="newName" type="text" placeholder="example: John Smith" ng-model="newName">
+			<label for="newCompany">Company</label>
+			<input id="newCompany" type="text" placeholder="example: Apple, Inc." ng-model="newCompany">
+			<label for="newDue">Company</label>
+			<input id="newDue" type="text" placeholder="01/21/1989" ng-model="newDue">
+		</section>
+		<footer class="modal__footer">
+			<button class="modal__footer--cancel" ui-sref="home" ng-click="clearModal()">Cancel</button>
+			<button class="modal__footer--confirm" ng-click="addNew()">Submit</button>
+		</footer>
+	</section>
+</div>

@@ -58,5 +58,10 @@
 				}
 			};
 
+			$scope.$on('addNew', function(event, newContact){
+				originalData.push(newContact);
+				$scope.list = originalData;
+			});
+
 		}]);
 })();

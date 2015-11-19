@@ -48,7 +48,7 @@
 	<section class="content__table">
 		<header class="content__table--header">
 			<p>With Selected (<span>{{ checkedCount }}</span>):</p>
-			<button>
+			<button ui-sref="home.addModal">
 				<i class="fa fa-plus"></i>
 				Add to Cadence
 			</button>
@@ -161,4 +161,8 @@
 			</table>
 		</div>
 	</section>
+
+	<!-- Modal -->
+	<section class="modal" ui-view="modal"></section>
+
 </section>
