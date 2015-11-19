@@ -5,13 +5,19 @@
 			<i class="fa fa-close" ui-sref="home"></i>
 		</header>
 		<section class="modal__content">
-			<p>Enter the information for your new contact.</p>
-			<label for="newName">Name</label>
-			<input id="newName" type="text" placeholder="example: John Smith" ng-model="newName">
-			<label for="newCompany">Company</label>
-			<input id="newCompany" type="text" placeholder="example: Apple, Inc." ng-model="newCompany">
-			<label for="newDue">Company</label>
-			<input id="newDue" type="text" placeholder="01/21/1989" ng-model="newDue">
+			<p class="modal__content--description">Enter the information for your new contact.</p>
+			<label for="newName">
+				<p>Name</p>
+				<input id="newName" type="text" placeholder="example: John Smith" ng-model="newName">
+			</label>
+			<label for="newCompany">
+				<p>Company</p>
+				<input id="newCompany" type="text" placeholder="example: Apple, Inc." ng-model="newCompany">
+			</label>
+			<label for="newDue">
+				<p>Due Date</p>
+				<input id="newDue" type="text" placeholder="example: 01/21/1989" ng-model="newDue">
+			</label>
 		</section>
 		<footer class="modal__footer">
 			<button class="modal__footer--cancel" ui-sref="home" ng-click="clearModal()">Cancel</button>

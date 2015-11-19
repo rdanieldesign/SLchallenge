@@ -13,9 +13,19 @@
 	}
 
 	&__box {
+		@include shadow;
 		width: 80%;
+		max-width: 35rem;
 		background-color: $white;
 		margin: 0 auto;
+
+		&.remove-modal {
+			border-top: .6rem solid $red;
+		}
+
+		&.add-modal {
+			border-top: .6rem solid $green;
+		}
 	}
 
 	&__header,
@@ -29,6 +39,7 @@
 		display: flex;
 		flex-flow: row nowrap;
 		align-items: center;
+		background-color: $offwhite;
 
 		h2 {
 			flex: 1 1 auto;
@@ -36,18 +47,75 @@
 
 		i {
 			flex: 0 0 auto;
+			font-size: 1.2rem;
+			color: $grey;
 		}
 	}
 
 	&__content {
-		margin-bottom: 1rem;
+		margin: 2rem 0 1rem;
+
+		&--description {
+			margin: 0 0 2rem;
+		}
+
+		label {
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			margin-bottom: .6rem;
+
+			p {
+				margin: 0 1rem 0 0;
+				flex: 0 0 4rem;
+			}
+
+			input {
+				flex: 1 1 auto;
+				height: 2.4rem;
+				padding-left: .4rem;
+				border-radius: $border-radius;
+				border: 1px solid $light-grey;
+			}
+
+		}
 	}
 
 	&__footer {
-		padding-bottom: 1rem;
+		padding: 1rem;
+		border-top: 1px solid $light-grey;
+		display: flex;
+	    flex-flow: row nowrap;
+	    justify-content: flex-end;
 
-		button {
+		&--confirm {
+			@include slBtn;
+
+			.remove-modal & {
+				border-color: $red;
+				color: $red;
+			}
+
+			.add-modal & {
+				border-color: $green;
+				color: $green;
+			}
+		}
+
+		&--cancel {
 			@include slBtn;
 		}
+
+		button {
+			margin-left: .6rem;
+		}
+	}
+
+	.remove-modal {
+		$theme: $red;
+	}
+
+	.add-modal {
+		$theme: $green;
 	}
 }
