@@ -38,21 +38,24 @@
 	</ul>
 	<label class="content__filter">
 		<span>Filter by Step</span>
-		<select name="step-filter" ng-model="activeStep" ng-change="filterSteps(activeStep)">
-			<option value="" selected>All</option>
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-		</select>
+		<span class="content__filter--select">
+			<select name="step-filter" ng-model="activeStep" ng-change="filterSteps(activeStep)">
+				<option value="" selected>All</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+			</select>
+			<i class="fa fa-chevron-down"></i>
+		</span>
 	</label>
 	<section class="content__table">
 		<header class="content__table--header">
 			<p>With Selected (<span>{{ checkedCount }}</span>):</p>
-			<button ui-sref="home.addModal">
+			<button class="greenBtn" ui-sref="home.addModal">
 				<i class="fa fa-plus"></i>
 				Add to Cadence
 			</button>
-			<button ui-sref="home.removeModal">
+			<button class="redBtn" ui-sref="home.removeModal">
 				<i class="fa fa-recycle"></i>
 				Remove from Cadence
 			</button>

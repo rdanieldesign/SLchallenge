@@ -92,6 +92,31 @@
 		text-align: center;
 		display: inline-block;
 		margin-bottom: 2rem;
+		position: relative;
+
+		&--select {
+			position: relative;
+			height: 2rem;
+			display: inline-block;
+			margin-left: 0.6rem;
+
+			i {
+				position: absolute;
+				top: .6rem;
+				right: .8rem;
+				pointer-events: none;
+			}
+		}
+
+		select {
+			@include slBtn;
+			-webkit-appearance: none;
+		    -moz-appearance: none;
+		    appearance: none;
+			width: 6rem;
+			height: 2rem;
+			padding: 0 0.6rem;
+ 		}
 	}
 
 	&__table {
@@ -101,7 +126,7 @@
 
 		&--header {
 			width: 100%;
-			padding: 1rem;
+			padding: 1rem 1rem .4rem;
 			display: flex;
 		    flex-flow: row wrap;
 		    align-items: center;
@@ -129,6 +154,16 @@
 				@media(min-width: 500px){
 					width: auto;
 					margin-right: 0.4rem;
+				}
+
+				&.redBtn {
+					border-color: $red;
+					color: $red;
+				}
+
+				&.greenBtn {
+					border-color: $green;
+					color: $green;
 				}
 			}
 		}
