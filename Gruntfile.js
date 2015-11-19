@@ -208,7 +208,6 @@ module.exports = function (grunt) {
         files: {
           src: [
             '<%= config.dist %>/styles/{,*/}*.css',
-            '<%= config.dist %>/images/{,*/}*.*',
             '<%= config.dist %>/*.{ico,png}'
           ]
         }
