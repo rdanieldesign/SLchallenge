@@ -22,6 +22,7 @@
 				} else {
 					$scope.checkedCount--;
 				}
+				$scope.allChecked = false;
 			};
 
 			$scope.checkAll = function(allChecked){
@@ -64,12 +65,29 @@
 			});
 
 			$scope.$on('removeSelected', function(){
-				originalData = $scope.list.filter(function(item){
-					return !item.isChecked
-				});
-				$scope.list = originalData;
-				$scope.checkedCount = 0;
-			});
 
+				var deleted = [], kept = [];
+
+				$scope.list.forEach(function(item){
+					if(item.isChecked){
+						deleted.push(item);
+					} else {
+						kept.push(item);
+					}
+				});
+
+				$scope.list = kept;
+
+				deleted.forEach(function(x){
+					originalData.forEach(function(y, index){
+						if(y['name'] === x['name']){
+							originalData.splice(index, 1);
+						}
+					});
+				});
+
+				$scope.checkedCount = 0;
+				$scope.allChecked = false;
+			});
 		}]);
 })();
