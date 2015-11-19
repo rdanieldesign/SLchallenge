@@ -23,6 +23,11 @@
 				$state.go('home');
 			};
 
+			$scope.removeSelected = function(){
+				$rootScope.$broadcast('removeSelected');
+				$state.go('home');
+			};
+
 			$scope.toggleNav = function(){
 				$rootScope.$broadcast('toggleNav');
 				$scope.closed = !$scope.closed;

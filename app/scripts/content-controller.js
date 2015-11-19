@@ -3,7 +3,7 @@
 
 	angular
 		.module('app')
-		.controller('ContentController', ['$scope', '$filter', 'ContentFactory', function($scope, $filter, ContentFactory){
+		.controller('ContentController', ['$scope', '$rootScope', '$filter', 'ContentFactory', function($scope, $rootScope, $filter, ContentFactory){
 
 			var originalData;
 			var orderBy = $filter('orderBy');
@@ -61,6 +61,14 @@
 			$scope.$on('addNew', function(event, newContact){
 				originalData.push(newContact);
 				$scope.list = originalData;
+			});
+
+			$scope.$on('removeSelected', function(){
+				originalData = $scope.list.filter(function(item){
+					return !item.isChecked
+				});
+				$scope.list = originalData;
+				$scope.checkedCount = 0;
 			});
 
 		}]);
